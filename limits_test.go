@@ -41,7 +41,7 @@ func TestLimit(t *testing.T) {
 		go func() {
 			defer wg.Done()
 			w := performRequest(r, "GET", "/")
-			if w.Code != 200 {
+			if w.Code != http.StatusOK {
 				result = false
 			}
 		}()
