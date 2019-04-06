@@ -48,7 +48,7 @@ func TestLimit(t *testing.T) {
 	}
 	wg.Wait()
 	var timer = time.Since(starttime)
-	if (timer < time.Millisecond*1100) && (timer > time.Microsecond*900) && result == true {
+	if (timer < time.Millisecond*1100) && (timer > time.Millisecond*900) && result == true {
 		test = true
 	}
 	assert.Equal(t, true, test)
