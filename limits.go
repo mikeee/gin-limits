@@ -1,3 +1,4 @@
+// limits is a gin middleware handler that allows for connection throttling.
 package limits
 
 import (
@@ -14,8 +15,8 @@ func MaxConnections(count int) gin.HandlerFunc {
 		<-semaphore
 	}
 	return func(context *gin.Context) {
-		acquire()      // before request
-		defer relase() // after request
+		acquire()
+		defer relase()
 		context.Next()
 	}
 }
