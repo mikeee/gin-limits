@@ -11,12 +11,12 @@ func MaxConnections(count int) gin.HandlerFunc {
 	acquire := func() {
 		semaphore <- struct{}{}
 	}
-	relase := func() {
+	release := func() {
 		<-semaphore
 	}
 	return func(context *gin.Context) {
 		acquire()
-		defer relase()
+		defer release()
 		context.Next()
 	}
 }
