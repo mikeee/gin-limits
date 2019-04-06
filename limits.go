@@ -6,8 +6,8 @@ import (
 )
 
 // MaxConnections creates an artificial limit on connections.
-func MaxConnections(count int) gin.HandlerFunc {
-	semaphore := make(chan struct{}, count)
+func MaxConnections(limit int) gin.HandlerFunc {
+	semaphore := make(chan struct{}, limit)
 	acquire := func() {
 		semaphore <- struct{}{}
 	}
