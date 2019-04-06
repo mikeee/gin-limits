@@ -1,0 +1,23 @@
+# use the latest ubuntu environment (18.04) available on travis
+dist: xenial
+
+language: go
+
+env:
+  - GO111MODULE=on
+
+go:
+  - 1.11.x
+  - 1.12.x
+  
+git:
+  depth: 1
+
+
+install: true
+
+notifications:
+  email: false
+
+script:
+  - go test -v -race ./... 
