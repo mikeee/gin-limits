@@ -31,4 +31,4 @@ func main() {
 
 ## Licence
 
-This package is released under the MIT License as available in the [LICENSE](license) file
+This package is released under the MIT License as available in the [LICENSE](LICENSE) file
