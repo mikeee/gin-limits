@@ -1,5 +1,9 @@
 # gin-limits
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/mikeee/gin-limits.svg?branch=master)](https://travis-ci.org/mikeee/gin-limits)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mikeee/gin-limits)](https://goreportcard.com/report/github.com/mikeee/gin-limits)
+
 Gin framework middleware that currently implements connections throttling through the use of `limits.MaxConnections()`
 
 ## Usage/Example
