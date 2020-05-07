@@ -1,4 +1,4 @@
-# use the latest ubuntu environment (18.04) available on travis
+# use ubuntu (16.04) environment
 dist: xenial
 
 language: go
@@ -8,12 +8,12 @@ env:
 
 go:
   - 1.x
+  - 1.13.x
   - 1.14.x
   - master
-  
+
 git:
   depth: 1
-
 
 install: true
 
@@ -21,4 +21,4 @@ notifications:
   email: false
 
 script:
-  - go test -v -race ./... 
+  - go test -v -race ./...
