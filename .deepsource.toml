@@ -1,0 +1,19 @@
+version = 1
+
+[[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "go"
+
+  [analyzers.meta]
+  import_root = "github.com/mikeee/gin-limits"
+
+[[transformers]]
+name = "gofumpt"
+
+[[transformers]]
+name = "gofmt"
