@@ -32,10 +32,10 @@ func TestLimit(t *testing.T) {
 	})
 
 	var wg sync.WaitGroup
-	var result = true
+	result := true
 	var test bool
 
-	var starttime = time.Now()
+	starttime := time.Now()
 	for i := 0; i < 20; i++ {
 		wg.Add(1)
 		go func() {
@@ -47,7 +47,7 @@ func TestLimit(t *testing.T) {
 		}()
 	}
 	wg.Wait()
-	var timer = time.Since(starttime)
+	timer := time.Since(starttime)
 	if (timer < time.Millisecond*1100) && (timer > time.Millisecond*900) && result == true {
 		test = true
 	}
