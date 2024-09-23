@@ -18,7 +18,7 @@ package main
 import (
     "net/http"
     "github.com/gin-gonic/gin"
-    "github.com/mikeee/gin-limits"
+    limits "github.com/mikeee/gin-limits"
 )
 
 func main() {
